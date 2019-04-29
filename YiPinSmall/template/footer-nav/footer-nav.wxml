@@ -1,8 +1,0 @@
-<!--template/footer-nav/footer-nav.wxml-->
-<template name="footerBox">
- <view class='wrap-footer'>
-    <view class='ft-links'>
-     <text>店铺主页</text><text>会员中心</text><text>关注我们</text><text>店铺信息</text>
-    </view>
-  </view>
-</template>
