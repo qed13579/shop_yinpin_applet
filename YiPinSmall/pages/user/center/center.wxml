@@ -1,0 +1,85 @@
+<!-- 骨架块 -->
+<skeleton selector="skeleton" loading="spin" bgcolor="#FFF" wx:if="{{showSkeleton}}">
+</skeleton>
+
+<view class='skeleton page' hidden='{{hidden}}'>
+  <scroll-view scroll-y="true" style="height:100%" bindscrolltolower="onReachBottom" bindscrolltoupper="onPullDownRefresh">
+    <view class='section-user '>
+      <view class='section-user-left'>
+        <image src='{{webUserData.img}}' class='user-img skeleton-radius'></image>
+      </view>
+      <view class='section-user-right'>
+        <view class='user skeleton-rect'>
+          <view class='username '>{{webUserData.name}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 中间菜单栏部分 -->
+    <view class='page-content'>
+      <view class='weui-cells skeleton-rect '>
+        <navigator class='weui-cell weui-cell_access' url='/pages/cart/cart'>
+          <view class='weui-hd'>
+            <image src='/images/nav-icons/green-theme/my-shopping-cart.png'></image>
+          </view>
+          <view class='weui-cell__bd '>
+            <text class='text'>购物车</text>
+          </view>
+          <view class='weui-cell__ft'>
+          </view>
+        </navigator>
+        <navigator class='weui-cell weui-cell_access' url='/pages/order/list/list'>
+          <view class='weui-hd '>
+            <image src='/images/nav-icons/green-theme/my-order.png'></image>
+          </view>
+          <view class='weui-cell__bd '>
+            <text class='text'>我的订单</text>
+          </view>
+          <view class='weui-cell__ft'></view>
+        </navigator>
+        <navigator class='weui-cell weui-cell_access' url='/pages/user/address/address/address?isaccount=0'>
+          <view class='weui-hd '>
+            <image src='/images/nav-icons/green-theme/my-address.png'></image>
+          </view>
+          <view class='weui-cell__bd '>
+            <text class='text'>地址管理</text>
+          </view>
+          <view class='weui-cell__ft'></view>
+        </navigator>
+        <navigator class='weui-cell weui-cell_access' url='/pages/user/invoice/invoice?status=1'>
+          <view class='weui-hd '>
+            <image src='/images/nav-icons/green-theme/my-invoice.png'></image>
+          </view>
+          <view class='weui-cell__bd '>
+            <text class='text'>发票管理</text>
+          </view>
+          <view class='weui-cell__ft'></view>
+        </navigator>
+        <navigator class='weui-cell weui-cell_access' url='/pages/user/gift/gift'>
+          <view class='weui-hd '>
+            <image src='/images/nav-icons/green-theme/my-cards.png'></image>
+          </view>
+          <view class='weui-cell__bd '>
+            <text class='text'>礼品卡</text>
+          </view>
+          <view class='weui-cell__ft'></view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 推荐部分 -->
+    <view class='Recommend-box'>
+      <view class='title-text'>推荐</view>
+      <view wx:if="{{goodlist.length>0}}">
+        <block wx:for="{{goodlist}}" wx:key="key">
+           <navigator class='recommend-content' url='/pages/goods/show/show?id={{item.id}}'> 
+            <image src='{{item.img}}' mode='widthFix' class='recommend-img'></image>
+           </navigator> 
+        </block>
+      </view>
+      <view class='Recommend-box-null' wx:else>
+        <text>推荐区暂无数据</text>
+      </view>
+    </view>
+
+
+  </scroll-view>
+</view>

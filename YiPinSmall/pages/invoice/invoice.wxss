@@ -1,0 +1,163 @@
+.scroll{
+  height: 1000rpx;
+  width: 100%;
+  /* background-color: lavender; */
+}
+
+.box{
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  height: 190rpx;
+  width: 100%;
+   background-color: whitesmoke; 
+  border-bottom: 1rpx solid gainsboro;
+    border-top: 1rpx solid gainsboro;
+  margin-bottom: 20rpx;
+}
+.type{
+  height: 60rpx;
+  width: 100%;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+
+.choose{
+float: left;
+   height: 60rpx;
+  width: 230rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.button{
+  position: absolute;
+  bottom: 0;
+}
+
+.button{
+position: absolute;
+bottom: 0;
+height: 100rpx;
+width: 100%;
+
+}
+
+.page{
+  background-color: black;
+  opacity: 0.5;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 88888;
+}
+.invoicebox{
+  /* border-top: 1rpx solid gray; */
+    display: block;
+    height:900rpx;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+}
+.sintopl3{
+  border: 1rpx solid orangered;
+  /* background-color: pink; */
+  color: orangered;
+    margin-left: 10rpx;
+  height: 50rpx;
+  width: 120rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  text-align: center;
+  float: left;
+  border-radius: 80rpx;
+}
+.intop{
+  height: 80rpx;
+  width: 100%;
+  /* background-color: red; */
+
+}
+.intopl{
+  height: 80rpx;
+  width: 100rpx;
+  font-size: 35rpx;
+  line-height: 80rpx;
+  text-align: center;
+  float: left;
+}
+
+
+.intopr{
+  color: gray;
+  height: 80rpx;
+  width: 80rpx;
+  font-size: 35rpx;
+  line-height: 80rpx;
+    text-align: center;
+  float: right;
+  /* background-color: honeydew; */
+}
+
+
+.intop2{
+  height: 80rpx;
+  width: 100%;
+  /* background-color: royalblue; */
+
+}
+.intopl2{
+  height: 80rpx;
+  width: 150rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  float: left;
+}
+.intop5{
+    height: 80rpx;
+  width: 100%;
+  /* background-color: royalblue; */
+}
+.intopl5{
+    height: 80rpx;
+  width: 180rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  float: left;
+}
+
+.intoplinput{
+    height: 80rpx;
+  width:500rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  margin-left: 20rpx;
+  float: left;
+  /* background-color: lavender; */
+}
+.intopl3{
+  margin-left: 10rpx;
+  height: 50rpx;
+  width: 120rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  text-align: center;
+  float: left;
+  border-radius: 80rpx;
+}
+.inbotton{
+  color: #fff;
+  background-color: orangered;
+  height: 80rpx;
+  width: 90%;
+  border-radius: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 10rpx;
+  left: 5%;
+}

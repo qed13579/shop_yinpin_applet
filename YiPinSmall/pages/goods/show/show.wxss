@@ -1,0 +1,414 @@
+@import "/pages/nav/nav.wxss";
+
+@import "/pages/navgate/navgate.wxss";
+.discount{
+  color: gray;
+  text-decoration: line-through;
+  font-size: 20rpx;
+}
+page {
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+}
+
+.wrap {
+  padding-bottom: 100rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  background-color: #fff;
+  width: 100%;
+  height: 750rpx;
+}
+
+.product-desc {
+  /* width: 100%; *//* height: 188rpx; */
+  background: #fff;
+  font-size: 30rpx;
+  padding: 15rpx;
+}
+
+.product-desc .price {
+  font-size: 36rpx;
+  color: #f44;
+  margin-top: 10rpx;
+}
+
+.stock-detail {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.sku-detail {
+  position: relative;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  line-height: 20rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  padding: 30rpx 20rpx;
+  box-sizing: content-box;
+}
+
+.van-icon {
+  position: absolute;
+  right: 20rpx;
+}
+
+.van-icon::before {
+  display: inline-block;
+  content: "";
+  height: 15rpx;
+  width: 15rpx;
+  border: 1px solid #000;
+  border-color: #000 #000 transparent transparent;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.detail-container {
+  background: #fff;
+  font-size: 28rpx;
+  
+}
+
+.list-item {
+  padding: 20rpx;
+  position: relative;
+}
+
+.detail-container .list-item:not(:first-child) {
+  border-top: 1px solid #eee;
+}
+
+.recommend {
+  font-size: 28rpx;
+  margin: 40rpx 10rpx;
+  display: block;
+  height: auto;
+  float: left;
+}
+
+.recommend::after {
+  clear: both;
+  content: '';
+}
+
+.recommend .more-text {
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+
+.goodslist {
+  width: 100%;
+  float: left;
+}
+
+.goodslist-item {
+  /* height: 360rpx; */
+  width: 47%;
+  float: left;
+  background: #fff;
+  margin: 10rpx;
+}
+
+.good-img {
+  height: 350rpx;
+}
+
+.good-img image {
+  height: 100%;
+  width: 100%;
+}
+
+.good-desc {
+  padding: 15rpx 0 10rpx 10rpx;
+}
+
+.goodslist-item .good-price {
+  color: #f44;
+  margin-top: 10rpx;
+}
+
+.good-desc .good-content {
+  height: 80rpx;
+  line-height: 40rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  flex-shrink: 0;
+}
+
+/* 购物车弹框 */
+
+/*使屏幕变暗  */
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 999;
+  color: #fff;
+}
+
+/*对话框 */
+
+.commodity_attr_box {
+  width: 94%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  padding: 20rpx 3%;
+}
+
+.commImg {
+  position: absolute;
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  border: 1px solid #f5f5f5;
+  z-index: 12;
+  left: 20px;
+  top: -35px;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+
+.commImg image {
+  width: 100%;
+  height: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.sku-price {
+  color: red;
+  position: relative;
+  left: 250rpx;
+  margin: 1rpx;
+  width: 55%;
+}
+
+.sku-title {
+  position: relative;
+  left: 250rpx;
+  font-size: 12px;
+  margin: 1rpx;
+  width: 55%;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  flex-shrink: 0;
+}
+
+.line {
+  width: 95%;
+  height: 2rpx;
+  display: inline-block;
+  margin: 30rpx 0rpx 5rpx 0rpx;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.gg-title {
+  font-size: 15px;
+}
+
+.gg text {
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  background: #f2f2f2;
+  text-align: center;
+  margin: 20rpx 0 0 26rpx;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.gg .active {
+  color: #fff;
+  background: #e64340;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row .quantity-position {
+  position: absolute;
+  margin-top: 5px;
+  right: 50rpx;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button-add {
+  width: 50%;
+  border: 0px;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 0px;
+}
+
+.button-buy {
+  width: 100%;
+  background: #f44336;
+  color: #fff;
+  border-radius: 0px;
+}
+
+/*数量加减样式*/
+
+/*主容器*/
+
+.stepper {
+  width: 160rpx;
+  height: 52rpx;
+  /*给主容器设一个边框*/
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  width: 38rpx;
+  line-height: 52rpx;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.stepper input {
+  padding: 0px;
+  width: 80rpx;
+  height: 52rpx;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24rpx;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+.tab-item {
+  width: 30%;
+  height: 99rpx;
+  float: left;
+  text-align: center;
+  line-height: 100rpx;
+  overflow: hidden;
+  position: relative;
+  /* border-right: 1px solid #dddddd; */
+}
+
+.tab-item:nth-child(1):after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 99rpx;
+  border-left: 1px solid #ddd;
+}
+
+.tab-content {
+  width: 100%;
+  height: 99rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  z-index: 99;
+  font-size: 28rpx;
+}
+
+.special-tab-item {
+  width: 20%;
+  margin: 0;
+  line-height: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+}
+
+.special-tab-item::after {
+  border: 0rpx;
+}
+
+.special-tab-item .tab-service {
+  font-size: 28rpx;
+}
+
+.tab-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.cart {
+  background: #f85;
+  color: #fff;
+}
+
+.buy {
+  background: #f44;
+  color: #fff;
+}
+
+.btn_close {
+  position: absolute;
+  top: 15rpx;
+  right: 25rpx;
+  border: 1px solid rgb(143, 141, 141);
+  border-radius: 50%;
+  font-size: 35rpx;
+  color: rgb(143, 141, 141);
+  height: 35rpx;
+  line-height: 35rpx;
+  width: 35rpx;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

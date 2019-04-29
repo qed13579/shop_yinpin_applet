@@ -1,0 +1,153 @@
+<!--pages/search/search.wxml-->
+
+
+<view class='wrap'>
+  <view class='wrap-top'>
+    <view class='search-box'>
+      <image src='/images/goodlist/find.png' class='search-icon'></image>
+      <input class='search-input' placeholder='稻花香' data-placeholder='稻花香' value="{{seachinfo}}" bindinput="onInput" bindfocus="onfocus" maxlength='20'></input>
+      <image src='/images/goodlist/closs.png' class="search-back-pic {{!seachinfo?'hidden':''}}" bindtap="searchdelete"></image>
+    </view>
+    <text class='cancel' bindtap='seacrhList'>搜索</text>
+  </view>
+
+<!--nogoods==false  -->
+  <view class="search-bd {{list.length==0?'':'hidden'}} {{nogoods==false?'':'hidden'}}" >
+    <view class="search-history {{history.length === 0?'hidden':''}}">
+      <text>历史记录</text>
+      <view class="history-delete" bindtap="deleteall">
+        <image src="/images/goodlist/delete.png" class="history-delete-pic" />
+      </view>
+    </view>
+    <view class="history-position" wx:for="{{history}}" wx:key="index" bindtap='selectText'  data-value='{{item}}'>
+      <text bindtap="toHistory" >{{item}}</text>
+    </view>
+
+    <!-- <view class="search-guess {{history.length === 0?'top':''}}">
+      <text>热门搜索</text>
+    </view>
+
+    <view class="history-position" wx:for="{{guess}}" wx:key="index">
+      <text data-value='{{item}}' bindtap='selectText'>{{item}}</text>
+    </view> -->
+
+
+  </view>
+  <!--搜索列表  -->
+
+
+  
+
+
+
+
+
+
+
+
+  <!-- <view class='search-list'  >
+      <view class='list-item' wx:for="{{list}}" wx:key="{{key}}">
+         <view class='item-left'>
+          <image src='{{item.image}}' class='item-img'></image>
+         </view>
+         <view class='item-right'>
+          <view class='course-name'>{{item.name}}</view>
+          <view class='course-desc'>{{item.title}}</view>
+          <view class='age'>适合{{item.age}}岁</view>
+         </view>
+      </view>
+  </view> -->
+
+
+
+<!-- <view class='page'>    </view> -->
+
+<view class='search-list'>
+
+  <!-- <block wx:for="{{list}}" wx:key wx:for-item="item">
+    <view class='cbox' bindtap='togoodshow' data-id='{{item.id}}'>
+      <view class='ctbox skeleton-rect'>
+        <image class='img5' src='{{item.img}}'></image>
+    </view>
+      <view class='cbbox'>
+        {{item.title}}
+      </view>
+    </view>
+  </block> -->
+
+
+  <block wx:for="{{list}}" wx:key wx:for-item="item">
+    <view class='box' bindtap='togoodshow' data-id='{{item.id}}'>
+      <view class='mbox skeleton-rect'>
+        <image class='img' src='{{item.img}}'></image>
+        <view class='rigth'>
+          <view class='rtop'>{{item.title}}</view>
+          <view class='rbot'>
+            <view class='rbotl'>￥{{item.price/100}}
+               <text class='discount' wx:if="{{item.money!=item.discount&&item.discount!=0}}">￥{{item.discount/100}}</text> 
+            </view>
+            <view class='rbotr0'  catchtap='tocart' data-id='{{item.id}}'>
+              <view class='rbotr'>
+                <image class='img2' src='/images/goodlist/shop.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+  </view>
+</view>
+
+ 
+
+
+
+    <view wx:if="{{nogoods}}" hidden='{{hidden}}' class='notfind1'>
+      <image src='/images/goodlist/notfind.png'></image>
+      <view class='text1'>暂无数据</view>
+    </view> 
+    <view wx:else>
+   <view  hidden='{{hidecontent}}'>
+ <view wx:if="{{hasMore}}" class="tip-text" hidden='{{hidden}}'>
+
+          上拉加载...
+        </view>
+        <view wx:else>
+   
+          <text class="tip-text">没有更多内容了</text>
+      </view>
+        </view>
+
+
+</view>
+<!-- <view class='tips2'>
+      <view wx:if="{{isHasData}}" hidden='{{hidden}}'>
+        <view wx:if="{{hasMore}}" class="tip-text">
+
+          上拉加载...
+        </view>
+        <view wx:else>
+          <text class="tip-text">没有更多内容了</text>
+        </view>
+      </view> -->
+
+
+ <!-- <view class='tips2'>
+      <view wx:if="{{isHasData}}" hidden='{{hidden}}'>
+        <view wx:if="{{hasMore}}" class="tip-text">
+
+          上拉加载...
+        </view>
+        <view wx:else>
+          <text class="tip-text">没有更多内容了</text>
+        </view>
+      </view>
+
+      <view hidden='{{hidden}}' class='notfind2' wx:else>
+        <image src='/images/goodlist/notfind.png'></image>
+        <view class='text1'>暂无数据</view>
+      </view>
+    </view> -->

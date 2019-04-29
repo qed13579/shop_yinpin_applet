@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "skeleton": "/template/skeleton/skeleton"
+  },
+  "navigationBarTitleText": "收货地址",
+  "enablePullDownRefresh": false,
+  "disableScroll": true
+}

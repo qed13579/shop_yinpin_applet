@@ -1,0 +1,265 @@
+.tab-h {
+  width: 100%;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-shadow: 0 1px 5px gainsboro;
+  background-color: white;
+}
+
+
+
+.tab-item {
+
+  font-size: 30rpx;
+  display: inline-block;
+  width: 20%;
+  color: #777;
+}
+
+.tab-item.active {
+  /* color: #333;
+  position: relative; *//* font-weight: 777; */
+  line-height: 70rpx;
+  color: orangered;
+  border-bottom: 6rpx solid orangered;
+
+}
+
+
+
+
+
+
+.scrollbox{
+  display: block;
+  height: 100%;
+  width: 100%;
+    /* background-color: red;   */
+}
+page{
+  height: 100%;
+  background-color: whitesmoke;
+}
+.btn{
+  /* height: 44rpx; */
+  padding: 5rpx 20rpx;
+
+  /* line-height: 44rpx; */
+  font-size: 22rpx;
+  float: right;
+  text-align: center;
+  margin-right: 30rpx;
+  border-radius: 44rpx;
+  margin-top: 12rpx;
+  border:1rpx solid #F33A34;
+  color:#F33A34; 
+}
+
+.btn2{
+  /* height: 44rpx; */
+  padding: 5rpx 20rpx;
+
+  /* line-height: 44rpx; */
+  font-size: 22rpx;
+  float: right;
+  text-align: center;
+  margin-right: 30rpx;
+  border-radius: 44rpx;
+  margin-top: 12rpx;
+  border:1rpx solid gainsboro;
+  color:#333; 
+}
+.box{
+
+  display: block;
+  height: 370rpx;
+  width: 100%;
+     background-color: white;   
+   /* margin-top: 10rpx; */
+  /* padding: 10rpx; */
+  /* padding-left: 20rpx; */
+  box-sizing: border-box;
+  margin-bottom:30rpx;
+}
+.topbox{
+  display: block;
+  height: 60rpx;
+  width: 100%;
+      background-color: white;   
+   font-size: 25rpx;
+   line-height:65rpx;
+     padding-left: 20rpx;
+     box-sizing: border-box;
+}
+.bin{
+  display: block;
+  height: 50rpx;
+  width: 50rpx;
+     background-color: white;   
+  float: right;
+}
+.botbox{
+  border-bottom: 2rpx solid whitesmoke;
+  /* font-size: 25rpx; */
+  letter-spacing: 1rpx;
+  font-size: 25rpx;
+  text-align: right;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+  line-height: 60rpx;
+  display: block;
+  height: 60rpx;
+  width: 100%;
+     background-color: white;   
+}
+.botbox2{
+  
+  box-sizing: border-box;
+  display: block;
+  height:70rpx;
+  width: 100%;
+     background-color: white;   
+}
+.mbox{
+
+    /* border: 1rpx solid gainsboro; */
+  height: 180rpx;
+  width: 100%;
+    background-color: whitesmoke;  
+    overflow: hidden;
+}
+
+.img{
+  float: left;
+  height: 180rpx;
+  width: 180rpx;
+    background-color: whitesmoke;  
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.img3{
+  height: 160rpx;
+  width: 160rpx;
+}
+.rigth{
+  float: left;
+  height: 180rpx;
+  width: 568rpx;
+    background-color:  whitesmoke;  
+  line-height: 35rpx;
+  font-size:30rpx;
+  padding-left: 10rpx;
+ box-sizing: border-box;
+
+    /*  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  -webkit-box-pack: center;
+          
+  flex-shrink: 0;
+  color: #333; */
+  /* -webkit-box-align: center; */
+}
+
+
+.rigthbox{
+   margin-top: 36rpx; 
+  
+  height: 105rpx;
+  width: 538rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  -webkit-box-pack: center;
+          
+  flex-shrink: 0;
+  color: black;
+    background-color:  whitesmoke;  
+}
+.rbotl{
+  float: left;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+    line-height: 60rpx;
+  font-size: 30rpx;
+  height: 60rpx;
+  width: 450rpx;
+     background-color: white;   
+  color: red;
+}
+.rbotr{
+    float: left;
+  opacity: 0.8;
+  box-sizing: border-box;
+    line-height: 60rpx;
+  font-size: 30rpx;
+  height: 50rpx;
+  width: 50rpx;
+      background-color: white;   
+  color: red;
+    border-radius: 100%;
+    border: 1rpx solid red;
+}
+.img2{
+
+
+  height: 30rpx;
+  width: 30rpx;
+  margin:10rpx;
+   margin-top: 12rpx; 
+}
+
+
+
+
+
+.tip-text {
+
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  color: gray;
+}
+
+
+
+.notfind1 image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.notfind1 .text1 {
+  color: #ddd;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/*设置盒子居中*/
+
+.notfind1 {
+    background-color: whitesmoke;  
+  position: absolute;
+  top: 26%;
+  left: 36%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1111111;
+}
+
+ .tips2 {
+
+  width: 100%;
+  height: 100rpx;
+
+    background-color: whitesmoke;  
+} 

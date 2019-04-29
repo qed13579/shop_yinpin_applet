@@ -1,0 +1,102 @@
+<skeleton selector="skeleton" loading="spin" bgcolor="#FFF" wx:if="{{showSkeleton}}">
+</skeleton>
+
+
+
+
+<view class="page skeleton ">
+
+
+
+  <view wx:if="{{hasList}}">
+    <view class='topbox'>
+    
+      <view class='topboxleft'>
+        <icon wx:if="{{selectAllStatus}}" color="red" type="success" class="total-select" bindtap="selectAll" />
+        <icon wx:else type="circle" class="total-select" bindtap="selectAll" />
+      </view>
+
+      <view class='topboxright' bindtap='edit'>{{status}}</view>
+    </view>
+    <view class="cart-box">
+
+      <view class="touch-item {{item.isTouchMove&&status=='编辑' ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{carts}}" wx:key="">
+
+
+        <view class="content">
+
+          <view hidden='{{show}}'>
+            <view class='abdel' bindtap="deleteList" data-index="{{index}}" data-id='{{item.pid}}'>删除</view>
+
+            <view class='abnum'>
+              <view class='abnumbox'>
+                <view class='lit' bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}" data-id='{{item.pid}}'>
+                  <text class="cart-count-down">-</text>
+                </view>
+                <view class='lit'>
+                  <text class="cart-count-num">{{item.count}}</text>
+                </view>
+                <view class='lit' bindtap="addCount" data-index="{{index}}" data-id='{{item.pid}}'>
+                  <text class="cart-count-add">+</text>
+                </view>
+              </view>
+            </view>
+          </view>
+
+          <view class='left'>
+            <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}" class="cart-pro-select" bindtap="selectList" />
+            <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList" />
+          </view>
+
+          <view class='leftimg' bindtap='togoodshow' data-id='{{item.pid}}'>
+            <image class="leftimg" src="{{item.img}}"></image>
+          </view>
+
+          <view class='right'  bindtap='togoodshow' data-id='{{item.pid}}'>
+            <view class='righttop' >
+              {{item.title}}
+            </view>
+            <view class='rightmiddle'>
+              <!-- 备注 -->
+            </view>
+
+            <view class='rightbottom'>
+              <view class='rightbottomleft'>￥{{item.price/100}}</view>
+              <view class='rightbottomright'>x{{item.count}}</view>
+            </view>
+          </view>
+        </view>
+
+
+
+
+
+        <view wx:if="{{nowdel}}" class="del" data-index="{{index}}" bindtap="deleteList" data-id='{{item.pid}}'>删除</view>
+      </view>
+
+
+    </view>
+
+
+    <view class="{{isIPX?'bottomm':''}}"></view>
+    <view class="{{isIPX?'coverr':''}}"></view>
+
+    <view class="cart-footer  {{isIPX?'isIPX':''}}">
+      <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" class="total-select" bindtap="selectAll" />
+      <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll" />
+      <view hidden="{{show}}">
+        <view class='delbottom' bindtap='deleteall'>
+          删除
+        </view>
+      </view>
+      <view class="order-icon" bindtap='account'>
+        结算
+      </view>
+      <text>全选</text>
+      <text class="cart-toatl-price">￥{{totalPrice/100}}</text>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="cart-no-data" wx:if="{{word}}">购物车是空的哦~</view>
+  </view>
+</view>

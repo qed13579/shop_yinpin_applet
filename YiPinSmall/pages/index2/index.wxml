@@ -1,0 +1,100 @@
+<!-- <!-- <import src='/pages/nav/nav.wxml'/> -->
+<!-- 骨架块 -->
+<skeleton selector="skeleton" loading="spin" bgcolor="#FFF" wx:if="{{showSkeleton}}">
+</skeleton>
+
+<view class='skeleton wrap'>
+<!--  -->
+  <view class='page' hidden='{{dataHidden}}'>
+    <view class='page-head'>
+      <!-- <view class='head-left'>
+      <image src='/images/nav-icons/menu.png' class='menu-img'></image>
+    </view> -->
+      <view class='head-center'>
+        <image src='/images/goodlist/find.png' class='img-find'></image>
+        <input placeholder='有机五常大米稻花香' class='input' placeholder-class="place-holder" bindtap='searchinput'></input>
+
+      </view>
+      <!-- <view class='head-right'>
+      <text class='right-text'>En</text>
+    </view> -->
+    </view>
+    <!-- 分类导航 -->   
+    <view class='page-menu'>
+      <block wx:for="{{menuList}}" wx:key="key">
+        <navigator class='menu-tab' url='{{item.url}}' hover-class='none' open-type='{{item.opentype}}'>
+          <text class='tab-text'>{{item.title}}</text>
+        </navigator>
+      </block>
+    </view>
+    <!-- 分类导航end -->
+    <!-- 轮播图 -->
+    <view class='page-swiper' wx:if="{{topList.length>0}}">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper" indicator-color="{{color}}" indicator-active-color="{{activecolor}}" circular="true">
+        <block wx:for="{{topList}}" wx:key="{{key}}">
+          <swiper-item>
+            <navigator class='wrap-img' url='{{item.url}}' open-type="{{item.opentype}}">
+              <image src="{{item.img}}" class="slide-image" mode='aspectFit' />
+            </navigator>
+                      <navigator wx:if="{{item.type == 1}}" class='more' url='/pages/goods2/list/list' open-type='switchTab' hover-class='none'>看更多
+            <image src='/images/index/triangle.png' class='triangle-img'></image>
+          </navigator>
+          <navigator wx:if="{{item.type == 2}}" class='more' url='/pages/news/list/list' open-type='switchTab' hover-class='none'>看更多
+            <image src='/images/index/triangle.png' class='triangle-img'></image>
+          </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='swiper-null' wx:else>
+      <text>该轮播区块暂无数据</text>
+    </view>
+    <!--轮播图end  -->
+    <!-- 公告 -->
+    <view class='page-notice'>
+      <view class='notice-left'>公告
+        <image src='/images/index/noties.png' class='notice-img'></image>
+      </view>
+      <view class='notice-right'>
+        <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="{{interval}}">
+          <block wx:for="{{inforList}}" wx:key="key">
+            <navigator url="{{item.url}}" open-type="{{item.opentype}}">
+              <swiper-item catchtouchmove="stopTouchMove">
+                <view class="swiper_item">{{item.title}}</view>
+              </swiper-item>
+            </navigator>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <!-- 公告end -->
+    <view class='classify'>
+      <!-- <block wx:for="{{prouctList}}">
+    <view class='classify-item'>
+      <image src='{{item.img}}' mode='aspectFill' class='item-img'></image>
+    </view>
+   </block> -->
+      <view class='classify-item' wx:if="{{prouctList.length>0}}">
+        <block wx:for="{{prouctList}}" wx:key="{{key}}">
+
+          <navigator url='{{item.url}}' class='list-item' hover-class="none">
+
+            <image src='{{item.img}}' mode='widthFix' class='item-img'></image>
+          </navigator>
+        </block>
+      </view>
+      <view class='classify-item' wx:else>
+        <block wx:for="{{4}}" wx:key>
+          <view class='classify-null'></view>
+        </block>
+      </view>
+
+    </view>
+
+  </view>
+  <!--  -->
+  <view class='notfind1' hidden='{{nodataHidden}}'>
+    <image src='/images/goodlist/notfind.png'></image>
+    <view class='text1'>暂无数据</view>
+  </view>
+</view>

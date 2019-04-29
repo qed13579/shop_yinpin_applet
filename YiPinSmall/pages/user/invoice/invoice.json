@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+      "skeleton": "/template/skeleton/skeleton"
+    },
+  "navigationBarTitleText": "发票管理",
+      "enablePullDownRefresh": false,
+      "disableScroll": true
+}

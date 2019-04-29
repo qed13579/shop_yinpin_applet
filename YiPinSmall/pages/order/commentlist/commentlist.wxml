@@ -1,0 +1,45 @@
+<skeleton selector="skeleton" loading="spin" bgcolor="#FFF" wx:if="{{showSkeleton}}">
+</skeleton>
+
+
+
+
+
+<view class='skeleton page'>
+   <scroll-view class='scrollbox' scroll-y="true" bindscrolltolower="onReachBottom" style="height:{{isIPX?winHeight-68/rpxR:winHeight}}px">
+<!-- <scroll-view class='scoll'> -->
+<view>
+
+  <block wx:for="{{list}}" wx:key>
+    <view class='mbox'>
+      <view class='img' bindtap='togoodsdetail' data-id='{{item.id}}'>
+        <image class='img3' src='{{item.img}}'></image>
+      </view>
+      <view class='rigth'>
+        <view class='rt'>
+
+          <view class='rt2'>{{item.title}}</view>
+          <view class='num'> 数量：{{item.count}}</view>
+        </view>
+        <view class='rb'>￥{{item.price/100}}
+
+          <view class='btn' bindtap='tocard' data-id='{{item.id}}' wx:if="{{item.iscomment==false&&status==10}}" data-orderid='{{detail.id}}' data-img='{{item.img}}' data-title='{{item.title}}'>评价商品</view>
+          <view class='btn2' bindtap='togocomment' data-id='{{item.id}}' wx:if="{{item.iscomment==true&&status==10}}" >查看评论</view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+
+
+
+
+</view>
+
+
+<view class="{{isIPX?'bottomm':''}}"></view>
+<view class="{{isIPX?'coverr':''}}"></view>
+ </scroll-view> 
+</view>
+
+

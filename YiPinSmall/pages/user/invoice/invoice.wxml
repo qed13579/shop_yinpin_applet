@@ -1,0 +1,51 @@
+<!--pages/address/address.wxml-->
+<skeleton selector="skeleton" loading="spin" bgcolor="#FFF" wx:if="{{showSkeleton}}"></skeleton>
+<view class='wrap skeleton'>
+  <scroll-view class='scrollbox' scroll-y="true" bindscrolltolower="onReachBottom" style="height:{{isIPX?winHeight-168/rpxR:winHeight-100/rpxR}}px">
+    <view class="touch-item {{items[index].isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{list}}" wx:key="">
+      <view class="content">
+        <view class='content-box'>
+          <view class='box-left'>
+            <icon wx:if="{{selectedlist[item.id]}}" type='success' size='23' color='red' bindtap='changebtn' data-index="{{index}}" data-id="{{item.id}}"></icon>
+            <icon wx:else type='circle' size='23' bindtap='changebtn' data-index="{{index}}" data-id="{{item.id}}"></icon>
+          </view>
+          <view class='box-middle' bindtap='toback' data-id="{{item.id}}" data-selected="{{selectedlist[item.id]}}">
+            <view class='information'>
+              <!-- <text>抬头：</text> -->
+              <text>{{item.title}}</text>
+            </view>
+            <!-- <view class='address_info'>
+              <text wx:if="{{item.type==1}}">个人</text>
+                <text wx:if="{{item.type==2}}">单位</text>
+            </view> -->
+          </view>
+        </view>
+      </view>
+      <view class="del" bindtap="del" data-id="{{item.id}}">删除</view>
+      <view class="del edit" bindtap="editAdress" data-id="{{item.id}}">编辑</view>
+    </view>
+    <navigator class='nodata' wx:if="{{list.length==0}}" url='/pages/user/invoicedetail/invoicedetail?id=0' hover-class='none'>
+      <text>新增发票</text>
+    </navigator>
+
+  </scroll-view>
+
+
+  <view wx:if="{{list.length>0}}">
+    <view wx:if="{{status==0}}" class="page-bottom2  {{isIPX?'isIPX2':''}}" bindtap='dontinvoice'>
+      <text>不开发票</text>
+    </view>
+
+    <navigator class="page-bottom  {{isIPX?'isIPX':''}}" url='/pages/user/invoicedetail/invoicedetail?id=0'>
+      <text>新增发票</text>
+    </navigator>
+  </view>
+
+
+</view>
+
+
+
+
+<view class="{{isIPX?'bottomm':''}}"></view>
+<view class="{{isIPX?'coverr':''}}"></view>

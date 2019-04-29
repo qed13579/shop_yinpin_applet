@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "skeleton": "/template/skeleton/skeleton"
+  },
+  "navigationBarTitleText": "资讯",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundTextStyle": "dark"
+}

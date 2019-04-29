@@ -1,0 +1,137 @@
+/* pages/firstpage/firstpage.wxss */
+page{
+  width: 100%;
+  height: 100%;
+
+}
+
+.slide-image{
+    width: 100%;
+  height: 100%;
+}
+.nav{
+  display: block;
+  height: 60rpx;
+  width: 150rpx;
+  position: absolute;
+  /* border-radius: 100%; */
+  top: 3%;
+  right: 8%;
+  background-color: black;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+  opacity: 0.5
+}
+.nav2{
+  display: block;
+  height: 60rpx;
+  width: 150rpx;
+  position: absolute;
+  /* border-radius: 100%; */
+  top: 3%;
+ right: 9%;
+  /* background-color: black; */
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* page {  
+  background-color: black;
+    height: 100%;  
+    overflow: hidden;
+} */
+
+.section{
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+#myVideo{
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.nav5{
+  display: block;
+  height: 60rpx;
+  width: 150rpx;
+  position: absolute;
+  /* border-radius: 100%; */
+  top: 3%;
+ right: 4%;
+  /* background-color: black; */
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+  
+}
+.nav3{
+  display: block;
+  height: 120rpx;
+  width: 50%;
+  position: absolute;
+  /* border-radius: 100%; */
+  /* top: 40%; */
+  bottom: 20%;
+  left: 25%;
+  background-color: black;
+  /* border-radius: 100%; */
+  /* padding-left: 40rpx; */
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #fff;
+  opacity: 0.2
+}
+.nav4{
+  display: block;
+  height: 120rpx;
+  width: 50%;
+  position: absolute;
+  /* border-radius: 100%; */
+  /* top: 40%; */
+  bottom: 20%;
+  left: 25%;
+  /* background-color: black; */
+  /* border-radius: 100%; */
+  /* padding-left: 40rpx; */
+  line-height: 120rpx;
+  font-size: 42rpx;
+  color: #fff;
+text-align: center;
+  border: 1rpx solid #fff;
+}
+
+

@@ -1,0 +1,93 @@
+/* pages/navgate/navgate.wxss */
+
+
+.nav_box{
+  float: left;
+  height: 100rpx;
+  width: 100rpx;
+  /* background-color: rebeccapurple; */
+  z-index: 9999;
+  position: relative;
+}
+
+.nav_nav{
+  height: 70rpx;
+  width: 100rpx;
+  position: absolute;
+  bottom:15rpx;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: -99;
+
+   border-top-left-radius: 10rpx;
+ border-bottom-left-radius:  10rpx;
+}
+.nav_bignav{
+  position: fixed;
+  height: 100rpx;
+  width: 500rpx;
+   /* background-color: #fff;  */
+
+  bottom: 20%;
+  right: -400rpx;
+    z-index: 9999;
+}
+.nav_left{
+    float: left;
+  width: 50rpx;
+  height: 100%;
+  /* background-color: red; */
+    font-size: 20rpx;
+    line-height: 100rpx;
+      color: #fff;
+  padding-left: 10rpx; 
+ box-sizing: border-box;
+ border-top-left-radius: 10rpx;
+ border-bottom-left-radius:  10rpx;
+
+}
+.nav_right{
+   /* padding-top: 20rpx;  */
+  float: left;
+      line-height: 30rpx;
+  width: 50rpx;
+  height: 100%;
+  /* background-color: black; */
+  font-size: 20rpx;
+  color: #fff;
+
+   display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  -webkit-box-pack: center;
+          
+  flex-shrink: 0;
+}
+
+.nav_boxin{
+  float: left;
+  height: 100rpx;
+  width: 100rpx;
+  background-color: aliceblue;
+}
+.nav_boxin_top{
+padding-top: 10rpx;
+  height: 50rpx;
+  width: 100%;
+
+}
+.nav_boxin_top_img{
+  margin-left:30rpx;
+  height: 40rpx;
+  width: 40rpx;
+  /* background-color: red; */
+}
+.nav_boxin_btm{
+  height: 40rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 25rpx;
+  color: gray;
+}
