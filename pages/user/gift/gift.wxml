@@ -1,0 +1,64 @@
+<view class='wrap'>
+  <!--选项导航start  -->
+  <view class="weui_tab" id="tab1">
+    <view class="weui_navbar">
+      <view class="weui_navbar_item {{index == 0 ? 'tab-active' : ''}}" data-current="0" data-type="1" bindtap="changeTabbar">
+        可用
+      </view>
+      <view class="weui_navbar_item  {{index == 1 ? 'tab-active' : ''}}" data-current="1" data-type="2" bindtap="changeTabbar">
+        已使用
+      </view>
+      <view class="weui_navbar_item  {{index == 2 ? 'tab-active' : ''}}" data-current="2" data-type="3" bindtap="changeTabbar">
+        过期
+      </view>
+    </view>
+  </view>
+  <swiper current="{{index}}" class="swiper-box" duration="300" bindchange="bindChange" style="height:{{isIPX?windowHeight-248:windowHeight-180}}rpx" hidden='{{ishasGiftList}}'>
+    <block wx:for="{{3}}" wx:for-index="index" wx:key="key">
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h" style="height:100%" class='main' bindscrolltolower="lower" bindscrolltoupper="onPullDownRefresh">
+          <view class='gift-card' wx:if="{{giftList.length>0}}">
+            <block wx:for="{{giftList}}" wx:key="key">
+              <view class='gift-list'>
+                <view class='card-item'>
+                  <view class='item-left'>
+                    <image src='{{item.img}}' class='item-img' mode=''></image>
+                    <view class='no-img' wx:if="{{type==2||type==3}}"></view>
+                  </view>
+                  <view class='item-right'>
+                    <view class='card-title'>{{item.title}}</view>
+                    <view class='worth'>余
+                      <text class='price'>￥{{item.balance}}</text> 面值:￥{{item.price}} </view>
+                    <view class='validity-period'>
+                      <text class='time'>有效期至{{item.expiredtime}}</text>
+                      <text class='btn-use' wx:if="{{type==1}}" bindtap='toUse'>立即使用</text>
+                    </view>
+                    <view class='detail' bindtap='detail' data-id="{{item.id}}">详细信息</view>
+                  </view>
+                </view>
+                <view class='text' wx:if="{{IdDatalist[item.id]}}">{{item.descs}}</view>
+              </view>
+            </block>
+          </view>
+          <view class='nodata' bindtap='toAddcard' wx:else>
+            <text>绑定新卡</text>
+          </view>
+          <!-- <view class='tips2' wx:else>
+            <view class='notfind1'>
+              <image src='/images/goodlist/notfind.png'></image>
+              <view class='text1'>暂无数据</view>
+            </view>
+          </view> -->
+        </scroll-view>
+      </swiper-item>
+    </block>
+
+  </swiper>
+
+  <view class="addCard {{isIPX?'isIPX':''}}" bindtap='toAddcard' wx:if="{{giftList.length>0}}">
+    <text>绑定新卡</text>
+  </view>
+</view>
+
+<view class="{{isIPX?'bottomm':''}}"></view>
+<view class="{{isIPX?'coverr':''}}"></view>

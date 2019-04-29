@@ -1,0 +1,82 @@
+<!--pages/order/logistics/logistics.wxml-->
+<view class='wrap'>
+  <view class='page-top '>
+    <view>
+      <text class='order-num' decode="{{true}}">运单编号:&nbsp;</text>{{logisticsid}}</view>
+    <!-- <view><text class='order-num'>预计送达:</text> 5月20日</view> -->
+  </view>
+
+
+
+
+  <view class='line'></view>
+  <view class='list'>
+
+<block wx:for="{{list}}" wx:key>
+
+
+<block wx:if="{{item.status==2}}" wx:key>
+    <view class='list-item'>
+      <view class='image-icon'>
+        <!-- <image src='/images/nav-icons/icon.png' class='icon' mode='scaleToFill'></image> -->
+         <image src='/images/nav-icons/icon-ed.png' class='icon' mode='scaleToFill'></image>
+      </view>
+      <view class='item-text special'>
+        {{item.context}}
+      </view>
+      <view class='item-time'>{{item.time}}</view>
+    </view>
+
+</block>
+
+
+
+<block wx:if="{{item.status==3}}" wx:key>
+
+    <view class='list-item'>
+      <view class='image-icon'>
+        <image src='/images/nav-icons/icon.png' class='icon' mode='scaleToFill'></image>
+      </view>
+      <view class='item-text'>
+        {{item.context}}
+      </view>
+      <view class='item-time'>{{item.time}}</view>
+    </view>
+
+</block>
+
+
+
+
+<block wx:if="{{item.status==0}}" wx:key>
+ <view class='list-item'>
+      <view class='image-icon'>
+        <image src='/images/nav-icons/icon.png' class='icon' mode='scaleToFill'></image>
+      </view>
+      <view class='item-text'>
+        {{item.context}}
+      </view>
+      <view class='item-time'>{{item.time}}</view>
+    </view>
+    </block>
+
+
+<block wx:if="{{item.status==1}}" wx:key>
+ <view class='list-item'>
+      <!-- <view class='image-icon'>
+        <image src='/images/nav-icons/icon.png' class='icon' mode='scaleToFill'></image>
+      </view> -->
+      <view class='item-text'>
+        {{item.context}}
+      </view>
+      <view class='item-time'>{{item.time}}</view>
+    </view>
+    </block>
+
+
+      </block>
+
+
+  </view>
+
+</view>

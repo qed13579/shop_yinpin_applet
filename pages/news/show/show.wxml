@@ -1,0 +1,25 @@
+<!--rich-textages/index/recommend_list/recommend.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<import src='/pages/navgate/navgate.wxml' />
+
+<template is="navgate" data="{{nav_icon,navcontent,animationData,animationData2}}"/> 
+<skeleton selector="skeleton" loading="spin" bgcolor="#FFF" wx:if="{{showSkeleton}}">
+</skeleton>
+
+<view class='skeleton page'>
+  <view class="weui-rich-textanel" hidden="{{hidden}}">
+    <view class="weui-rich-textanel__bd">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title">{{title}}</view>
+        <view class="weui-media-box__info">
+          <li class="weui-media-box__info__meta">发布时间：{{Time}}</li>
+          <li class="weui-media-box__info__meta weui-media-box__info__meta_extra">阅读：{{Reads}}</li>
+        </view>
+      </view>
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:contents.nodes}}" />
+        <!-- <web-view src="{{webSrc}}"></web-view> -->
+      </view>
+    </view>
+  </view>
+</view>

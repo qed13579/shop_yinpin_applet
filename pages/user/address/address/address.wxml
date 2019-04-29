@@ -1,0 +1,42 @@
+<!--pages/address/address.wxml-->
+<skeleton selector="skeleton" loading="spin" bgcolor="#FFF" wx:if="{{showSkeleton}}"></skeleton>
+<view class='wrap  skeleton'>
+  <scroll-view scroll-y style="height:{{isIPX?windowHeight-168:windowHeight-100}}rpx">
+    <view class='wrap-top'>
+      <view class="touch-item {{items[index].isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{addressList}}" wx:key="">
+        <view class="content">
+          <view class='content-box'>
+            <view class='box-left' wx:if="{{isaccount==1}}">
+              <icon wx:if="{{selectedlist[item.id]}}" type='success' size='23' color='red' bindtap='changebtn' data-index="{{index}}" data-id="{{item.id}}"></icon>
+              <icon wx:else type='circle' size='23' bindtap='changebtn' data-index="{{index}}" data-id="{{item.id}}"></icon>
+            </view>
+            <view class='box-middle' bindtap='toback' data-id="{{item.id}}" data-selected="{{selectedlist[item.id]}}">
+              <view class='information'>
+                <text>{{item.name}}</text>
+                <text>{{item.mobile}}</text>
+              </view>
+              <view class='address_info'>
+                <text class='default' wx:if="{{item.isdefault==true}}">默认</text>
+                <text>{{item.address}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="del" bindtap="todelete" data-id="{{item.id}}">删除</view>
+        <view class="del edit" bindtap="editAdress" data-id="{{item.id}}">编辑</view>
+      </view>
+
+
+      <view class='nodata' bindtap='tonewaddress' hover-class='none' wx:if="{{addressList.length==0}}">
+        <text>新增收货地址</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="page-bottom {{isIPX?'isIPX':''}}" bindtap='tonewaddress' wx:if="{{addressList.length>0}}">
+    <text>新增收货地址</text>
+  </view>
+
+  <view class="{{isIPX?'bottomm':''}}"></view>
+  <view class="{{isIPX?'coverr':''}}"></view>
+</view>

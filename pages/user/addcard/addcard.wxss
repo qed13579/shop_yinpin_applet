@@ -1,0 +1,23 @@
+/* pages/user/addcard/addcard.wxss */
+.cardview{
+  font-size: 30rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.inbotton3{
+  margin-top:350rpx;
+  color: #fff;
+  background-color: orangered;
+  height: 80rpx;
+  width: 90%;
+  border-radius: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.cardinput{
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  border: 1rpx solid gainsboro;
+  height: 100rpx;
+  margin-top: 30rpx;
+}

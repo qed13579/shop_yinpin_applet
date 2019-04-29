@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "skeleton": "/template/skeleton/skeleton"
+  },
+  "navigationBarTitleText": "资讯详情"
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "skeleton": "/template/skeleton/skeleton"
+  },
+  "navigationBarTitleText": "评价列表",
+  "enablePullDownRefresh": false,
+  "disableScroll": true
+}

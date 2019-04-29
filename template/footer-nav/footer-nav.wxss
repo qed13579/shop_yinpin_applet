@@ -1,0 +1,22 @@
+/* template/footer-nav/footer-nav.wxss */
+.wrap-footer{
+  padding-bottom: 150rpx;
+}
+.ft-links {
+  display: flex;
+  justify-content:center;
+  font-size:28rpx;
+}
+.ft-links text{
+  padding: 15rpx;
+  position: relative;
+}
+.ft-links text:not(:first-child)::after{
+  content: '';
+  position: absolute;
+  top:20rpx;
+  left: 0;
+  height: 30rpx;
+  border-left: 1px solid #E8E9E9;
+  
+}

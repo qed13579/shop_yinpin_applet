@@ -1,0 +1,68 @@
+<!--pages/address/add_address/add_address.wxml-->
+<!-- <import src="../../../../template/picker/index.wxml" /> -->
+
+
+
+<form bindsubmit="invoiceformsubmit">
+<view class='wrap'>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">发票抬头</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="" bindinput="getname" focus='true' maxlength='10' value='{{invoicearr.title}}' name="title"/>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label" >收票人电话</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="" bindinput="getphone" value='{{invoicearr.mobile}}' type='number' name="mobile"/>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">收票人邮箱</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="" bindinput="getcode" value='{{invoicearr.email}}' name="email"/>
+      </view>
+    </view>
+        <view class="weui-cell weui-cell_input" hidden="{{invoicearr.type==1?true:false}}">
+      <view class="weui-cell__hd" >
+        <view class="weui-label">纳税人识别号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="" bindinput="getcode" value='{{invoicearr.code}}' name="code"/>
+      </view>
+      
+    </view>
+
+
+
+       
+
+
+    <view class="weui-cell weui-cell_input">
+<radio-group   name="type" class="group" bindchange="radioChange">
+  <view class="label-2" >
+    <radio  value="1" checked="{{invoicearr.type==1?'checked':''}}" bindtap='check' data-id='1'></radio>个人
+    <radio  value="2" checked="{{invoicearr.type==2?'checked':''}}" bindtap='check' data-id='2'></radio>单位
+  </view>
+
+</radio-group>
+    </view>
+
+    
+  </view>
+
+  <view class='btn'>
+    <button class='preserve' bindtap='toPpreserve' form-type='submit'>保存</button>
+
+    <!-- <button class='del' bindtap='todel'>删除</button> -->
+  </view>
+</view>
+
+</form>

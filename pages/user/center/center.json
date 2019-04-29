@@ -1,0 +1,12 @@
+{
+
+  "usingComponents": {
+    "skeleton": "/template/skeleton/skeleton"
+  },
+  "navigationBarTitleText": "我的",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "enablePullDownRefresh": false,
+"disableScroll": true,
+  "onReachBottomDistance": 50
+}

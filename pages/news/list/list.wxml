@@ -1,0 +1,62 @@
+<!--pages/news/news.wxml-->
+
+<skeleton selector="skeleton" loading="spin" bgcolor="#FFF" wx:if="{{showSkeleton}}"></skeleton>
+<view class="page skeleton">
+  <scroll-view scoll-y bindscrolltolower="onReachBottom" bindscrolltoupper="onPullDownRefresh">
+
+    <view class="waterfall" hidden='{{hidden}}'>
+      <view class='water-left'>
+        <block wx:key="1234566xxx" wx:for="{{list}}">
+          <view class="item" bindtap="showDetail" wx:key="{{item.sign}}" data-sign="{{item.sign}}" data-id="{{item.id}}" wx:if="{{(index+1)%2==1}}" data-index="{{index}}">
+            <view class="item-content">
+              <!-- <view class='item-img big' wx:if="{{item.targettype == 5}}">
+                <image class='item-poster big skeleton-rect' src='{{item.img}}' mode='widthFix'></image>
+              </view> -->
+              <view class='item-img min'>
+                <image class='item-poster min skeleton-rect' src='{{item.img}}' mode='widthFix'></image>
+              </view>
+              <view class='item-title skeleton-rect'>{{item.title}}</view>
+              <view class='item-tip skeleton-rect'>{{item.time}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='water-right'>
+        <block wx:key="1234566xxx" wx:for="{{list}}">
+          <view class="item" bindtap="showDetail" wx:key="{{item.sign}}" data-sign="{{item.sign}}" data-id="{{item.id}}" wx:if="{{(index+1)%2==0}}" data-index="{{index}}">
+            <view class="item-content">
+              <!-- <view class='item-img big' wx:if="{{item.targettype == 5}}">
+                <image class='item-poster big skeleton-rect' src='{{item.img}}' mode='widthFix'></image>
+              </view> -->
+              <view class='item-img min' >
+                <image class='item-poster min skeleton-rect' src='{{item.img}}' mode='widthFix'></image>
+              </view>
+              <view class='item-title skeleton-rect'>{{item.title}}</view>
+              <view class='item-tip skeleton-rect'>{{item.time}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+  </scroll-view>
+
+  <!-- 底部加载提示 start -->
+  <view class="tips1" wx:if="{{isHasData}}" hidden='{{hidden}}'>
+    <view wx:if="{{hasMore}}" class="tip-text">
+      <!-- <image class="loading-img" src="../../images/loading.gif"></image>  -->
+      上拉加载...
+    </view>
+    <view wx:else>
+      <text class="tip-text">没有更多内容了</text>
+    </view>
+  </view>
+  <!-- 底部加载提示 end -->
+  <!-- 如果当前数据为空则显示 start  -->
+  <view class='notfind' wx:else>
+    <image src='/images/notfind.png'></image>
+    <view class='text'>暂无数据</view>
+  </view>
+
+</view>
+<!-- 如果当前数据为空则显示 end  -->

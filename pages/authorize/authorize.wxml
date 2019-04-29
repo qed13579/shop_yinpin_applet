@@ -1,0 +1,10 @@
+<view class='page'>
+  <view class='page-top'>
+    <image class="companyLogo" src='https://img.yzcdn.cn/upload_files/2017/11/10/FhysaCY6Fui4jOYKx63eA5Z2M6Za.png' mode="aspectFit"></image>
+    <text class='first'>登录 {{company}}</text>
+    <!-- <text>拒绝授权"{{Cinema}}"小程序</text> -->
+    <text> 为了给您提供更好的服务，请您点击按钮进行登录。</text>
+  </view>
+  <view class='page-bottom'></view>
+  <button class='btn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo">登录</button>
+</view>
