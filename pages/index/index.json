@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "skeleton": "/template/skeleton/skeleton"
-  },
-
-  "backgroundTextStyle": "dark"
-}
