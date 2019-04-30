@@ -15,4 +15,4 @@
  
 ## 图片的展示
 
-![图片名称](http://img.yizhongchuanmei.comz/upload/2019/04/30/0d7cfe6e-b.jpg)  
+![](http://gwjyhs.com/t6/702/1556602099x2890174417.jpg)  
